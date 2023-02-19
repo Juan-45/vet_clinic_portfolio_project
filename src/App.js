@@ -15,7 +15,7 @@ const App = () => {
     {
       to: HOME_URL,
       label: "Home",
-      element:<div style={{ height: "100vh" }}>"HOME"</div>,
+      element: <div style={{ height: "100vh" }}>"HOME"</div>,
     },
     {
       to: "/about",
@@ -55,6 +55,13 @@ const App = () => {
     },
   ];
 
+  const extraRoutes = [
+    {
+      path: "*",
+      element: <div>ERROR 404</div>,
+    },
+  ];
+
   const navBarOptions = {
     navigationOptions,
     withLogo: true,
@@ -64,29 +71,29 @@ const App = () => {
     },
   };
 
-  const mapNested = (arr) => {
+  const mapNested = (arr, extraRoutes) => {
     const result = [];
 
     arr.forEach((item) => {
       if (item.nested === undefined) {
         result.push({
-          to: item.to,
+          path: item.to,
           element: item.element,
         });
       } else {
         item.nested.forEach((nestedItem) =>
           result.push({
-            to: nestedItem.to,
+            path: nestedItem.to,
             element: nestedItem.element,
           })
         );
       }
     });
 
-    return result;
+    return result.concat(extraRoutes);
   };
 
-  const routesOptions = mapNested(navigationOptions);
+  const routesOptions = mapNested(navigationOptions, extraRoutes);
 
   const footerOptions = {
     homeUrl: HOME_URL,
