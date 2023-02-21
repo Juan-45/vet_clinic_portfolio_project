@@ -27,8 +27,8 @@ const StyledPageLink = styled(StyledLink)(({ theme }) => ({
 }));
 
 const PageLink = ({ to, children, sx, ...props }) => (
-  <StyledPageLink to={to} {...props}>
-    <Typography variant='button' textAlign='center' sx={sx}>
+  <StyledPageLink to={to} sx={sx} {...props}>
+    <Typography variant='button' textAlign='center'>
       {children}
     </Typography>
   </StyledPageLink>
