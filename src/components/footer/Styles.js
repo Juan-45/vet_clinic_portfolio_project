@@ -13,10 +13,9 @@ const Container = styled(Box)(({ theme }) => ({
 }));
 
 const MapContainer = styled(Box)(({ theme }) => ({
-  //TEST
-  background: "gray",
+  display: "flex",
+  justifyContent: "center",
   height: "400px",
-  //TEST
   width: "100%",
   [theme.breakpoints.up("tablet_min_900")]: {
     maxWidth: "65%",
