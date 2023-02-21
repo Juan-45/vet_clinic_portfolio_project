@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Box } from "@mui/material";
 
-const BottomCurve = ({ pathDefinition }) => (
+const BottomCurve = ({ pathDefinition, stopColor }) => (
   <Box sx={{ position: "absolute", bottom: 0, width: "100%" }}>
     <svg
       id='wave'
@@ -12,7 +12,7 @@ const BottomCurve = ({ pathDefinition }) => (
     >
       <defs>
         <linearGradient id='sw-gradient-0' x1='0' x2='0' y1='1' y2='0'>
-          <stop stopColor='rgba(255, 255, 255, 1)' offset='0%'></stop>
+          <stop stopColor={stopColor} offset='0%'></stop>
         </linearGradient>
       </defs>
       <path

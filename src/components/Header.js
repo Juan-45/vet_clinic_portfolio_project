@@ -1,14 +1,15 @@
+import PropTypes from "prop-types";
 import { Container, InnerContainer } from "components/header/Styles";
 import BottomCurve from "components/BottomCurve";
 import Background from "components/header/Background";
-import PropTypes from "prop-types";
+import { theme } from "theme/theme";
 
 const Header = ({ children, ...props }) => {
   return (
     <Container>
       <Background {...props} />
       <InnerContainer>{children}</InnerContainer>
-      <BottomCurve />
+      <BottomCurve stopColor={theme.palette.secondary.light} />
     </Container>
   );
 };
