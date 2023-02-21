@@ -110,6 +110,7 @@ const ItemDescription = styled(Typography)(({ theme }) =>
 
 const Title = styled(Typography)(({ theme }) => ({
   fontFamily: "Staatliches",
+  fontWeight: 500,
   position: "relative",
   marginBottom: theme.spacing(8),
   "&::after": {
