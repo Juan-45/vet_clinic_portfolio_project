@@ -36,7 +36,7 @@ const HomeHeader = ({ linkUrl }) => {
         </SecondaryText>
       </TextContainer>
       <LinkContainer>
-        <PageLink to={linkUrl}>Solicitar una entrevista</PageLink>
+        <PageLink to={linkUrl}>Solicitar un turno</PageLink>
       </LinkContainer>
     </Header>
   );
