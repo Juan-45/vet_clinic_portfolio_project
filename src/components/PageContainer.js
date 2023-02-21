@@ -7,6 +7,9 @@ const PageContainer = ({ children, navBarOptions, footerOptions }) => {
     <Box
       sx={{
         height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
       <NavBar {...navBarOptions} />
