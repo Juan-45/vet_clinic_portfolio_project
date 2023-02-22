@@ -5,7 +5,7 @@ import NavBar from "components/NavBar";
 import { styled } from "@mui/material/styles";
 import pin_c from "assets/pin_c.png";
 import useGoogleMaps from "hooks/useGoogleMaps";
-import "pages/home/InfoWindow.css";
+import "components/footer/InfoWindow.css";
 
 const PageContainer = ({ children, navBarOptions, footerOptions }) => {
   const locationsSettings = useMemo(
