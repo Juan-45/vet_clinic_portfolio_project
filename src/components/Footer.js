@@ -10,6 +10,7 @@ import {
   FooterLink,
   Anchor,
 } from "components/footer/Styles";
+import { LargeContainerFlex } from "components/CommonStyles";
 import { IconButton, Typography } from "@mui/material";
 import Logo from "components/Logo";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -66,6 +67,70 @@ const Footer = ({ homeUrl, imgUrl }, ref) => (
     <MapContainer ref={ref}>
       <Typography>CARGANDO . . . </Typography>
     </MapContainer>
+    <LargeContainerFlex
+      sx={{ marginLeft: "auto", marginRight: "auto", width: "100%" }}
+    >
+      <InfoText variant='h2' sx={{ width: "100%" }}>
+        Créditos a los autores de las imágenes
+      </InfoText>
+      <InfoItemContainer className='attributionsContainer'>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/beautiful-black-cat-with-green-eyes-looking-camera_12305353.htm#query=cat%20and%20dog%20dark%20colors&position=32&from_view=search&track=ais'
+        >
+          <StyledTypography>Freepik - Image by wirestock</StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/young-women-having-fun-with-dog-beach_29668815.htm#page=2&query=happy%20pet&position=41&from_view=search&track=ais'
+        >
+          <StyledTypography>Freepik - Image by Freepik</StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.flaticon.com/free-icons/healthcare-and-medical'
+          title='healthcare and medical icons'
+        >
+          <StyledTypography>
+            Freepik - Image by srip - Flaticon
+          </StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.flaticon.com/free-icons/clinic'
+          title='clinic icons'
+        >
+          <StyledTypography>
+            Freepik - Image by srip - Flaticon
+          </StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.flaticon.com/free-icons/toothbrush'
+          title='toothbrush icons'
+        >
+          <StyledTypography>
+            Freepik - Image by srip - Flaticon
+          </StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.flaticon.com/free-icons/health'
+          title='health icons'
+        >
+          <StyledTypography>
+            Freepik - Image by srip - Flaticon
+          </StyledTypography>
+        </FooterLink>
+      </InfoItemContainer>
+      <InfoItemContainer className='attributionsContainer'></InfoItemContainer>
+    </LargeContainerFlex>
   </Container>
 );
 

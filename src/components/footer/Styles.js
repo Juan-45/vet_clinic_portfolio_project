@@ -17,6 +17,7 @@ const MapContainer = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   height: "400px",
   width: "100%",
+  marginBottom: theme.spacing(10),
   [theme.breakpoints.up("tablet_min_900")]: {
     maxWidth: "65%",
   },
@@ -39,6 +40,18 @@ const InfoItemContainer = styled(Box)(({ theme }) => ({
   width: "100%",
   maxWidth: "calc(50% - 16px)",
   marginRight: theme.spacing(2),
+
+  "&.attributionsContainer": {
+    [theme.breakpoints.up("mobile_max_750")]: {
+      maxWidth: "calc(33.33% - 16px)",
+    },
+    [theme.breakpoints.up("tablet_min_900")]: {
+      maxWidth: "calc(25% - 16px)",
+    },
+    [theme.breakpoints.down("mobile_max_750")]: {
+      maxWidth: "calc(50% - 16px)",
+    },
+  },
 }));
 
 const StyledFlexRowCenter = styled(FlexRowCenter)(({ theme }) => ({
