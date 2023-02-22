@@ -40,6 +40,10 @@ const useTriggerOnScroll = () => {
       detectElement();
     }
 
+    if (scrolling === false) {
+      detectScroll();
+    }
+
     window.addEventListener("scroll", handleScroll, false);
 
     return () => {

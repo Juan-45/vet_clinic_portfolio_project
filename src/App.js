@@ -6,16 +6,27 @@ import ScrollToTop from "components/ScrollToTop";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { theme } from "theme/theme";
 import LOGO_125x125 from "assets/LOGO_125x125_c.png";
+import Home from "pages/Home";
 
 const App = () => {
   const HOME_URL = "/";
   const APPOINTMENT_URL = "/appointment";
+  const CONTACT_URL = "/resources/contact";
+  const SERVICES_URL = "/services";
 
   const navigationOptions = [
     {
       to: HOME_URL,
       label: "Home",
-      element: <div style={{ height: "100vh" }}>"HOME"</div>,
+      element: (
+        <Home
+          links={{
+            appointment: APPOINTMENT_URL,
+            contact: CONTACT_URL,
+            services: SERVICES_URL,
+          }}
+        />
+      ),
     },
     {
       to: "/about",
@@ -23,7 +34,7 @@ const App = () => {
       element: <div style={{ height: "100vh" }}>"ACERCA DE"</div>,
     },
     {
-      to: "/services",
+      to: SERVICES_URL,
       label: "Servicios",
       element: <div>"SERVICIOS"</div>,
     },
@@ -37,7 +48,7 @@ const App = () => {
       label: "Recursos",
       nested: [
         {
-          to: "/resources/contact",
+          to: CONTACT_URL,
           label: "Contáctanos",
           element: <div>"CONTACTANOS"</div>,
         },

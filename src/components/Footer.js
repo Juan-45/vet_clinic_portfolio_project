@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Container,
   MapContainer,
@@ -9,21 +10,21 @@ import {
   FooterLink,
   Anchor,
 } from "components/footer/Styles";
-import { IconButton } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import Logo from "components/Logo";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 
-const Footer = ({ homeUrl, imgUrl }) => (
+const Footer = ({ homeUrl, imgUrl }, ref) => (
   <Container>
     <InfoContainer>
       <StyledFlexRowCenter>
         <Logo homeURL={homeUrl} src={imgUrl} alt='logo' />
       </StyledFlexRowCenter>
       <InfoItemContainer>
-        <InfoText>Bv. Oroño, 1245</InfoText>
+        <InfoText>Av. Pellegrini, 3200</InfoText>
         <InfoText>Santa Fe, Rosario</InfoText>
         <InfoText>Te. 444-444-444</InfoText>
         <InfoText>
@@ -62,8 +63,10 @@ const Footer = ({ homeUrl, imgUrl }) => (
         </Anchor>
       </StyledFlexRowCenter>
     </InfoContainer>
-    <MapContainer></MapContainer>
+    <MapContainer ref={ref}>
+      <Typography>CARGANDO . . . </Typography>
+    </MapContainer>
   </Container>
 );
 
-export default Footer;
+export default React.forwardRef(Footer);
