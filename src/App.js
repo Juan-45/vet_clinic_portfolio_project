@@ -7,6 +7,7 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import { theme } from "theme/theme";
 import LOGO_125x125 from "assets/LOGO_125x125_c.png";
 import Home from "pages/Home";
+import OurStory from "pages/OurStory";
 
 const App = () => {
   const HOME_URL = "/";
@@ -29,10 +30,21 @@ const App = () => {
       ),
     },
     {
-      to: "/about",
       label: "Acerca de",
-      element: <div style={{ height: "100vh" }}>"ACERCA DE"</div>,
+      nested: [
+        {
+          to: "/about/story",
+          label: "Nuestra historia",
+          element: <OurStory />,
+        },
+        {
+          to: "/about/team",
+          label: "Nuestro equipo",
+          element: <div>"FAQ"</div>,
+        },
+      ],
     },
+
     {
       to: SERVICES_URL,
       label: "Servicios",
