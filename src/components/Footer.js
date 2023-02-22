@@ -78,6 +78,7 @@ const Footer = ({ homeUrl, imgUrl }, ref) => (
           target='_blank'
           rel='noreferrer'
           to='https://www.freepik.com/free-photo/beautiful-black-cat-with-green-eyes-looking-camera_12305353.htm#query=cat%20and%20dog%20dark%20colors&position=32&from_view=search&track=ais'
+          title='home header background'
         >
           <StyledTypography>Freepik - Image by wirestock</StyledTypography>
         </FooterLink>
@@ -85,6 +86,7 @@ const Footer = ({ homeUrl, imgUrl }, ref) => (
           target='_blank'
           rel='noreferrer'
           to='https://www.freepik.com/free-photo/young-women-having-fun-with-dog-beach_29668815.htm#page=2&query=happy%20pet&position=41&from_view=search&track=ais'
+          title='home presentation'
         >
           <StyledTypography>Freepik - Image by Freepik</StyledTypography>
         </FooterLink>
@@ -129,7 +131,24 @@ const Footer = ({ homeUrl, imgUrl }, ref) => (
           </StyledTypography>
         </FooterLink>
       </InfoItemContainer>
-      <InfoItemContainer className='attributionsContainer'></InfoItemContainer>
+      <InfoItemContainer className='attributionsContainer'>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/close-up-doctor-checking-up-dog_22892946.htm#page=3&query=bacl%20dog%20vet&position=16&from_view=search&track=ais'
+          title='our story header background'
+        >
+          <StyledTypography>Freepik - Image by Freepik</StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/close-up-veterinary-doctor-taking-care-pet_22548389.htm#query=veterinary%20clinic&position=0&from_view=search&track=ais'
+          title='our team header background'
+        >
+          <StyledTypography>Freepik - Image by Freepik</StyledTypography>
+        </FooterLink>
+      </InfoItemContainer>
     </LargeContainerFlex>
   </Container>
 );

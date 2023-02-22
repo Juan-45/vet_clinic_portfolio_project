@@ -8,6 +8,7 @@ import { theme } from "theme/theme";
 import LOGO_125x125 from "assets/LOGO_125x125_c.png";
 import Home from "pages/Home";
 import OurStory from "pages/OurStory";
+import OurTeam from "pages/OurTeam";
 
 const App = () => {
   const HOME_URL = "/";
@@ -40,7 +41,7 @@ const App = () => {
         {
           to: "/about/team",
           label: "Nuestro equipo",
-          element: <div>"FAQ"</div>,
+          element: <OurTeam />,
         },
       ],
     },
