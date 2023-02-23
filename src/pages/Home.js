@@ -1,7 +1,7 @@
 import HomeHeader from "pages/home/HomeHeader";
 import Divider from "components/Divider";
 import Presentation from "pages/home/Presentation";
-import MainServices from "components/MainServices";
+import MainServices from "pages/home/MainServices";
 
 const Home = ({ links }) => {
   return (
