@@ -37,10 +37,8 @@ const InfoItemContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "start",
-  width: "100%",
-  maxWidth: "calc(50% - 16px)",
   marginRight: theme.spacing(2),
-
+  marginBottom: theme.spacing(3),
   "&.attributionsContainer": {
     [theme.breakpoints.up("mobile_max_750")]: {
       maxWidth: "calc(33.33% - 16px)",
