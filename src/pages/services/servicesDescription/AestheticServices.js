@@ -12,7 +12,7 @@ import haircut_500x333_c from "assets/haircut_500x333_c.jpg";
 
 const AestheticServices = () => {
   return (
-    <LargeContainerFlex className='generic'>
+    <LargeContainerFlex className='sidePadding bottomSpace'>
       <ProminentTitle>Estética y aseo</ProminentTitle>
       <ResponsiveItemsContainer>
         <ServiceItem

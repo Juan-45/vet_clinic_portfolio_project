@@ -17,12 +17,19 @@ const MediumContainer = styled(Box)({
   marginRight: "auto",
 });
 
-const LargeContainer = styled(Box)({
+const LargeContainer = styled(Box)(({ theme }) => ({
   maxWidth: "1200px",
   width: "100%",
   marginLeft: "auto",
   marginRight: "auto",
-});
+  "&.sidePadding": {
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+  },
+  "&.bottomSpace": {
+    marginBottom: theme.spacing(8),
+  },
+}));
 
 const highlightCommon = {
   fontWeight: 600,
@@ -50,16 +57,11 @@ const StyledLink = styled(Link)({
   textDecoration: "unset",
 });
 
-const LargeContainerFlex = styled(LargeContainer)(({ theme }) => ({
+const LargeContainerFlex = styled(LargeContainer)({
   display: "flex",
   alignItems: "flex-start",
   flexWrap: "wrap",
-  "&.generic": {
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
-    marginBottom: theme.spacing(8),
-  },
-}));
+});
 
 const ResponsiveItemsContainer = styled(Box)({
   width: "100%",

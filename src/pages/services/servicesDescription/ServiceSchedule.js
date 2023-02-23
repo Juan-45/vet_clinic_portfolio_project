@@ -69,7 +69,7 @@ const BodyTextContainer = styled(ResponsiveItemsContainer)({
 
 const ServiceSchedule = () => {
   return (
-    <LargeContainerFlex className='generic'>
+    <LargeContainerFlex className='sidePadding bottomSpace'>
       <ProminentTitle>Nuestros horarios</ProminentTitle>
       <ResponsiveItemsContainer>
         <InnerContainer>

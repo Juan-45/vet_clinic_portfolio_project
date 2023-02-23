@@ -17,7 +17,7 @@ import emergencies_500x333_c from "assets/emergencies_500x333_c.jpg";
 
 const MedicalServices = () => {
   return (
-    <LargeContainerFlex className='generic'>
+    <LargeContainerFlex className='sidePadding bottomSpace'>
       <ProminentTitle>Atención médica</ProminentTitle>
       <ResponsiveItemsContainer>
         <ServiceItem

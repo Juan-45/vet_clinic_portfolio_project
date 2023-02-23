@@ -89,7 +89,7 @@ const MainServices = ({ links }) => {
   };
 
   return (
-    <LargeContainerFlex className='generic'>
+    <LargeContainerFlex className='sidePadding'>
       <ProminentTitle>Cuidados Integrales para tu Mascota</ProminentTitle>
       <ResponsiveItemsContainer>
         <InfoContainer
