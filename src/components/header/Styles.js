@@ -59,6 +59,7 @@ const StyledImg = styled("img")(({ theme }) => ({
   objectFit: "cover",
   width: "100%",
   background: "gray",
+  display: "block",
 }));
 
 const StyledPicture = styled("picture")({
@@ -99,12 +100,14 @@ const Blurb = styled(Typography)(({ theme }) =>
     textAlign: "center",
     [theme.breakpoints.up("tablet_min_900")]: {
       fontSize: "3rem",
+      paddingTop: theme.spacing(5),
     },
     [theme.breakpoints.up("tablet_min_1200")]: {
       fontSize: "3.5rem",
     },
     [theme.breakpoints.down("mobile_max_599")]: {
       fontSize: "1.5rem",
+      paddingTop: "0px",
     },
     [theme.breakpoints.down("screen_max_450")]: {
       fontSize: "1.2rem",
