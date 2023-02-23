@@ -16,7 +16,7 @@ import happy_dog_500x334_c from "assets/happy-dog_500x334_c.jpg";
 
 const Presentation = ({ links }) => {
   return (
-    <LargeContainer sx={{ marginBottom: "100px" }}>
+    <LargeContainer className='bottomSpace'>
       <ProminentTextSection>
         <Title variant='h1'>
           Confía en PetPaw para el cuidado de tu mascota

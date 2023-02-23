@@ -60,6 +60,7 @@ const StyledImg = styled("img")(({ theme }) => ({
   marginBottom: theme.spacing(3),
   marginLeft: "auto",
   marginRight: "auto",
+  display: "block",
 }));
 
 const MainServices = ({ links }) => {
@@ -88,9 +89,7 @@ const MainServices = ({ links }) => {
   };
 
   return (
-    <LargeContainerFlex
-      sx={{ width: "100%", paddingRight: "16px", paddingLeft: "16px" }}
-    >
+    <LargeContainerFlex className='sidePadding'>
       <ProminentTitle>Cuidados Integrales para tu Mascota</ProminentTitle>
       <ResponsiveItemsContainer>
         <InfoContainer

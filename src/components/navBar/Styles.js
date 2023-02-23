@@ -134,8 +134,10 @@ const NavBarContainer = styled("nav", {
   flexWrap: "nowrap",
   position: "fixed",
   top: "0",
+  left: 0,
   zIndex: "1200",
   width: "100%",
+  minWidth: "360px",
   minHeight: "25px",
   padding: `${theme.spacing(2)} ${theme.spacing(20)}`,
   paddingTop: theme.spacing(2),
@@ -286,34 +288,53 @@ const getMobileNoTouch = ({ theme }) => ({
 const StyledLinkMobileNoTouch = styled(StyledLink, {
   shouldForwardProp: (prop) => prop !== "active",
 })(({ theme, active }) =>
-  mergician(getMobileCommon({ theme, active }), getMobileNoTouch({ theme }))
+  mergician(getMobileCommon({ theme, active }), getMobileNoTouch({ theme }), {
+    marginTop: theme.spacing(3),
+    marginBottom: "0px",
+  })
 );
 
 const StyledLinkMobileTouch = styled(StyledLink, {
   shouldForwardProp: (prop) => prop !== "active",
-})(getMobileCommon);
-
-const NavMenuOpenMobile = styled(StyledListItem, {
-  shouldForwardProp: (prop) => prop !== "active",
 })(({ theme, active }) =>
   mergician(getMobileCommon({ theme, active }), {
-    "&:hover:after": {
-      boxShadow: theme.shadows[18],
-    },
-    "&:hover:before": {
-      width: "100%",
-    },
-    "& .navMenuArrow": {
-      position: "absolute",
-      right: theme.spacing(2),
-    },
-    "& .mobileMenuListItem": {
-      boxShadow: active ? theme.shadows[18] : "initial",
-    },
-    "& .mobileMenuList": {
-      transform: "translate(-9px, 100%)",
-      width: "100%",
-      paddingBottom: theme.spacing(2),
+    marginTop: theme.spacing(3),
+    marginBottom: "0px",
+  })
+);
+
+const NavMenuOpenMobileContainer = styled(ListItem, {
+  shouldForwardProp: (prop) => prop !== "active",
+})(({ theme, active }) => ({
+  width: "unset",
+  flexDirection: "column",
+  "& .navMenuArrow": {
+    position: "absolute",
+    right: theme.spacing(2),
+  },
+  "& .mobileMenuListItem": {
+    boxShadow: active ? theme.shadows[18] : "initial",
+  },
+  "& .mobileMenuList": {
+    position: "relative",
+    transform: "translateX(-8px)",
+    width: "calc(100% - 16px)",
+  },
+}));
+
+const NavMenuOpenMobile = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "active",
+})(({ theme, active }) =>
+  mergician(getNavItem({ theme }), getMobileCommon({ theme, active }), {
+    marginTop: theme.spacing(3),
+    marginBottom: "0px",
+    "&.noTouchScreen": {
+      "&:hover:after": {
+        boxShadow: theme.shadows[18],
+      },
+      "&:hover:before": {
+        width: "100%",
+      },
     },
   })
 );
@@ -332,6 +353,7 @@ export {
   StyledLinkMobileNoTouch,
   StyledLinkMobileTouch,
   NavMenuOpenMobile,
+  NavMenuOpenMobileContainer,
   NavMenuItemsContainer,
   NavMenuItemContainer,
   NavMenuItem,

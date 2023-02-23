@@ -10,7 +10,7 @@ const ProminentTitleContainer = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("screen_max_850")]: {
     marginLeft: "24px",
-    marginTop: "67px",
+    marginTop: "105px",
     marginBottom: "42px",
   },
 }));

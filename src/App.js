@@ -9,6 +9,7 @@ import LOGO_125x125 from "assets/LOGO_125x125_c.png";
 import Home from "pages/Home";
 import OurStory from "pages/OurStory";
 import OurTeam from "pages/OurTeam";
+import Services from "pages/Services";
 
 const App = () => {
   const HOME_URL = "/";
@@ -49,7 +50,7 @@ const App = () => {
     {
       to: SERVICES_URL,
       label: "Servicios",
-      element: <div>"SERVICIOS"</div>,
+      element: <Services links={{ appointment: APPOINTMENT_URL }} />,
     },
     {
       to: APPOINTMENT_URL,

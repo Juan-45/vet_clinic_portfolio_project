@@ -9,7 +9,7 @@ const Header = ({ children, ...props }) => {
     <Container>
       <Background {...props} />
       <InnerContainer>{children}</InnerContainer>
-      <BottomCurve stopColor={theme.palette.secondary.light} />
+      <BottomCurve stopColor={theme.palette.secondary.light} id='header' />
     </Container>
   );
 };

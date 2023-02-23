@@ -12,11 +12,24 @@ const FlexRowCenter = styled(Box)({
 
 const MediumContainer = styled(Box)({
   maxWidth: "900px",
+  width: "100%",
+  marginLeft: "auto",
+  marginRight: "auto",
 });
 
-const LargeContainer = styled(Box)({
+const LargeContainer = styled(Box)(({ theme }) => ({
   maxWidth: "1200px",
-});
+  width: "100%",
+  marginLeft: "auto",
+  marginRight: "auto",
+  "&.sidePadding": {
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+  },
+  "&.bottomSpace": {
+    marginBottom: theme.spacing(8),
+  },
+}));
 
 const highlightCommon = {
   fontWeight: 600,
@@ -50,12 +63,11 @@ const LargeContainerFlex = styled(LargeContainer)({
   flexWrap: "wrap",
 });
 
-const ResponsiveItemsContainer = styled(Box)(({ theme }) => ({
+const ResponsiveItemsContainer = styled(Box)({
   width: "100%",
   display: "flex",
   flexWrap: "wrap",
-  paddingLeft: theme.spacing(2),
-}));
+});
 
 const ResponsiveContainer = styled(Box, {
   shouldForwardProp: (prop) => prop !== "columns",
@@ -64,11 +76,11 @@ const ResponsiveContainer = styled(Box, {
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-start",
-  marginRight: theme.spacing(2),
   marginBottom: theme.spacing(3),
-  width: "calc(100% - 16px)",
+  width: "100%",
   [theme.breakpoints.up("sm")]: {
     width: "calc(50% - 16px)",
+    marginRight: theme.spacing(2),
   },
   [theme.breakpoints.up("tablet_min_900")]: {
     width: columns === 4 ? "calc(25% - 16px)" : "calc(33.33% - 16px)",

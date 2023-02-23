@@ -1,13 +1,17 @@
 import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-const DividerContainer = styled(Box)({
+const DividerContainer = styled(Box)(({ theme }) => ({
   margin: "auto",
-  marginTop: "100px",
-  marginBottom: "100px",
+  marginTop: theme.spacing(12),
+  marginBottom: theme.spacing(12),
   width: "80%",
   position: "relative",
-});
+  [theme.breakpoints.down("sm")]: {
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
+  },
+}));
 
 const Shadow = styled(Box)(({ theme }) => ({
   overflow: "hidden",
@@ -30,7 +34,7 @@ const Pin = styled(Box)(({ theme }) => ({
   position: "absolute",
   bottom: "-3px",
   left: "50%",
-  marginLeft: "-60px",
+  marginLeft: "-50px",
   borderRadius: "100%",
   boxShadow: theme.shadows[6],
   background: theme.palette.background.default,

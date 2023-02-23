@@ -67,9 +67,7 @@ const Footer = ({ homeUrl, imgUrl }, ref) => (
     <MapContainer ref={ref}>
       <Typography>CARGANDO . . . </Typography>
     </MapContainer>
-    <LargeContainerFlex
-      sx={{ marginLeft: "auto", marginRight: "auto", width: "100%" }}
-    >
+    <LargeContainerFlex>
       <InfoText variant='h2' sx={{ width: "100%" }}>
         Créditos a los autores de las imágenes
       </InfoText>
@@ -147,6 +145,90 @@ const Footer = ({ homeUrl, imgUrl }, ref) => (
           title='our team header background'
         >
           <StyledTypography>Freepik - Image by Freepik</StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/medicine-pet-care-people-concept-dog-veterinarian-doctor-vet-clinic_8327046.htm#query=veterinary%20services&position=40&from_view=search&track=ais'
+          title='services header background'
+        >
+          <StyledTypography>Freepik - Image by master1305</StyledTypography>
+        </FooterLink>
+
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/veterinarian-taking-care-pet_20823258.htm#query=vet%20vaccination&position=1&from_view=search&track=ais'
+          title='service vaccination'
+        >
+          <StyledTypography>Freepik - Image by master1305</StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/close-up-hands-checking-dog-s-mouth_22892943.htm#query=teeth%20cleaning%20vet&position=1&from_view=search&track=ais'
+          title='service dental cleaning'
+        >
+          <StyledTypography>Freepik - Image by Freepik</StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/close-up-veterinarian-taking-care-dog_18397180.htm#query=vet%20treatments&position=13&from_view=search&track=ais'
+          title='service exams'
+        >
+          <StyledTypography>Freepik - Image by Freepik</StyledTypography>
+        </FooterLink>
+      </InfoItemContainer>
+      <InfoItemContainer className='attributionsContainer'>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/close-up-veterinary-doctor-taking-care-pet_22548409.htm#page=2&query=vet%20treatments&position=16&from_view=search&track=ais'
+          title='treatments'
+        >
+          <StyledTypography>Freepik - Image by Freepik</StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/ill-dog-wearing-pet-collar_12428638.htm#query=hospitalization%20pet&position=1&from_view=search&track=ais'
+          title='hospitalization'
+        >
+          <StyledTypography>Freepik - Image by gpointstudio</StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/cute-cat-medical-examination-veterinary-clinic-measuring-blood-pressure_30222145.htm#query=ambulance%20vet&position=1&from_view=search&track=ais'
+          title='emergencies'
+        >
+          <StyledTypography>Freepik - Image by fxquadro</StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/washing-process-small-dog-bathroom-dog-washed-by-professional_17066091.htm#query=pet%20bath%20vet&position=13&from_view=search&track=ais'
+          title='bath'
+        >
+          <StyledTypography>Freepik - Image by prostooleh</StyledTypography>
+        </FooterLink>
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/close-up-hands-clipping-dog-s-nails_22892940.htm#query=vet%20nails&position=1&from_view=search&track=ais'
+          title='clipping nails'
+        >
+          <StyledTypography>Freepik - Image by Freepik</StyledTypography>
+        </FooterLink>
+
+        <FooterLink
+          target='_blank'
+          rel='noreferrer'
+          to='https://www.freepik.com/free-photo/yorkshire-terrier-getting-procedure-groomer-salon-young-woman-white-tshirt-trimming-little-dog-yorkshire-terrier-puppy-getting-haircut-with-shaving-machine_24440490.htm#query=vet%20hair%20cut&position=26&from_view=search&track=ais'
+          title='haircut'
+        >
+          <StyledTypography>Freepik - Image by prostooleh</StyledTypography>
         </FooterLink>
       </InfoItemContainer>
     </LargeContainerFlex>
