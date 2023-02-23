@@ -34,7 +34,7 @@ const Pin = styled(Box)(({ theme }) => ({
   position: "absolute",
   bottom: "-3px",
   left: "50%",
-  marginLeft: "-60px",
+  marginLeft: "-50px",
   borderRadius: "100%",
   boxShadow: theme.shadows[6],
   background: theme.palette.background.default,
