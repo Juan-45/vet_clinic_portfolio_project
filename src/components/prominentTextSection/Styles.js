@@ -86,6 +86,7 @@ const StyledImg = styled("img")(({ theme }) => ({
   boxShadow: theme.shadows[2],
   width: "100%",
   maxWidth: "500px",
+  display: "block",
 }));
 
 const Paragraph = styled(Typography)(({ theme }) => ({
