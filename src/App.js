@@ -10,6 +10,10 @@ import Home from "pages/Home";
 import OurStory from "pages/OurStory";
 import OurTeam from "pages/OurTeam";
 import Services from "pages/Services";
+import Appointment from "pages/Appointment";
+import Contact from "pages/Contact";
+import Faq from "pages/Faq";
+import Ratings from "pages/Ratings";
 
 const App = () => {
   const HOME_URL = "/";
@@ -55,26 +59,25 @@ const App = () => {
     {
       to: APPOINTMENT_URL,
       label: "Solicitar turno",
-      element: <div>"SOLICITAR TURNO"</div>,
+      element: <Appointment />,
     },
     {
-      // to: "/", this props was omited deliberately
       label: "Recursos",
       nested: [
         {
           to: CONTACT_URL,
           label: "Contáctanos",
-          element: <div>"CONTACTANOS"</div>,
+          element: <Contact />,
         },
         {
           to: "/resources/faq",
           label: "FAQ",
-          element: <div>"FAQ"</div>,
+          element: <Faq />,
         },
         {
           to: "/resources/rate_us",
           label: "Califícanos",
-          element: <div>"CALIFÍCANOS"</div>,
+          element: <Ratings />,
         },
       ],
     },
