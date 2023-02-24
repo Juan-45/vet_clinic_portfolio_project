@@ -33,7 +33,6 @@ const LargeContainer = styled(Box)(({ theme }) => ({
 
 const highlightCommon = {
   fontWeight: 600,
-  textDecoration: "underline",
 };
 
 const HighlightRed = styled("span")(({ theme }) =>
