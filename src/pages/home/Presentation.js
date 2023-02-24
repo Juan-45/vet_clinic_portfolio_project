@@ -33,12 +33,10 @@ const Presentation = ({ links }) => {
               <Bold>Contáctanos hoy para programar una cita.</Bold>
             </Paragraph>
             <FlexRowCenter>
-              <PageLink sx={{ marginRight: "32px" }} to={links.appointment}>
+              <PageLink sx={{ marginRight: "24px" }} to={links.appointment}>
                 Solicitar turno
               </PageLink>
-              <PageLink sx={{ marginRight: "32px" }} to={links.contact}>
-                Contáctanos
-              </PageLink>
+              <PageLink to={links.contact}>Contáctanos</PageLink>
             </FlexRowCenter>
           </ParagraphContainer>
           <ImgPositioning>
