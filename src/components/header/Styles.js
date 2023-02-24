@@ -98,6 +98,8 @@ const Blurb = styled(Typography)(({ theme }) =>
     fontFamily: "Cinzel",
     fontWeight: 600,
     textAlign: "center",
+    textShadow:
+      "0px 3px 3px rgba(0, 0, 0, 0.75), 0px 6px 6px rgba(0, 0, 0, 0.5), 0px 9px 9px rgba(0, 0, 0, 0.25)",
     [theme.breakpoints.up("tablet_min_900")]: {
       fontSize: "3rem",
       paddingTop: theme.spacing(5),
@@ -110,7 +112,7 @@ const Blurb = styled(Typography)(({ theme }) =>
       paddingTop: "0px",
     },
     [theme.breakpoints.down("screen_max_450")]: {
-      fontSize: "1.2rem",
+      fontSize: "1.35rem",
     },
   })
 );
