@@ -14,6 +14,7 @@ import Appointment from "pages/Appointment";
 import Contact from "pages/Contact";
 import Faq from "pages/Faq";
 import Ratings from "pages/Ratings";
+import Error404 from "pages/Error404";
 
 const App = () => {
   const HOME_URL = "/";
@@ -86,7 +87,7 @@ const App = () => {
   const extraRoutes = [
     {
       path: "*",
-      element: <div>ERROR 404</div>,
+      element: <Error404 />,
     },
   ];
 
