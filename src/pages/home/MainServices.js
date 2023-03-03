@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Box } from "@mui/material";
 import PageLink from "components/PageLink";
 import {
   FlexRowCenter,
@@ -39,9 +40,13 @@ const bounceIn = keyframes({
   },
 });
 
-const InfoContainer = styled(ResponsiveContainer, {
+const InfoContainer = styled(Box, {
   shouldForwardProp: (prop) => prop !== "trigger" && prop !== "delay",
 })(({ theme, trigger, delay }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  height: "100%",
   border: `1px solid ${theme.palette.divider}`,
   boxShadow: theme.shadows[2],
   background: theme.palette.background.default,
@@ -92,57 +97,65 @@ const MainServices = ({ links }) => {
     <LargeContainerFlex className='sidePadding'>
       <ProminentTitle>Cuidados Integrales para tu Mascota</ProminentTitle>
       <ResponsiveItemsContainer>
-        <InfoContainer
-          ref={targetEl1}
-          trigger={trigger1}
-          delay={getDelayArr({ max599, between600_899 })[0]}
-        >
-          <StyledImg src={vaccination} alt='vaccination' />
-          <ItemTitle>Vacunación.</ItemTitle>
-          <ItemDescription>
-            Entendemos la importancia de proteger a tu compañero. Porque un
-            futuro saludable comienza con una prevención efectiva.
-          </ItemDescription>
-        </InfoContainer>
-        <InfoContainer
-          ref={targetEl2}
-          trigger={trigger2}
-          delay={getDelayArr({ max599, between600_899 })[1]}
-        >
-          <StyledImg src={toothbrush} alt='dental health' />
-          <ItemTitle>Salud dental.</ItemTitle>
-          <ItemDescription>
-            Prevenimos problemas dentales y mantenemos una boca saludable para
-            una vida larga y feliz.
-          </ItemDescription>
-        </InfoContainer>
-        <InfoContainer
-          ref={targetEl3}
-          trigger={trigger3}
-          delay={getDelayArr({ max599, between600_899 })[2]}
-        >
-          <StyledImg src={bed} alt='admission' />
-          <ItemTitle>Internaciones.</ItemTitle>
-          <ItemDescription>
-            Con un equipo altamente capacitado y un ambiente acogedor, tu
-            mascota estará en buenas manos durante su recuperación.
-          </ItemDescription>
-        </InfoContainer>
-        <InfoContainer
-          ref={targetEl4}
-          trigger={trigger4}
-          delay={getDelayArr({ max599, between600_899 })[3]}
-        >
-          <StyledImg src={ambulance} alt='emergency services 24 hours' />
-          <ItemTitle>Servicio de emergencias 24 hs.</ItemTitle>
-          <ItemDescription>
-            Atendemos tu emergencia las 24/7: estamos aquí para proteger la
-            salud de tu mascota.
-          </ItemDescription>{" "}
-          <HighlightRed sx={{ fontSize: "1.5rem", textAlign: "center" }}>
-            Te: 555-555-555
-          </HighlightRed>
-        </InfoContainer>
+        <ResponsiveContainer>
+          <InfoContainer
+            ref={targetEl1}
+            trigger={trigger1}
+            delay={getDelayArr({ max599, between600_899 })[0]}
+          >
+            <StyledImg src={vaccination} alt='vaccination' />
+            <ItemTitle>Vacunación.</ItemTitle>
+            <ItemDescription>
+              Entendemos la importancia de proteger a tu compañero. Porque un
+              futuro saludable comienza con una prevención efectiva.
+            </ItemDescription>
+          </InfoContainer>
+        </ResponsiveContainer>
+        <ResponsiveContainer>
+          <InfoContainer
+            ref={targetEl2}
+            trigger={trigger2}
+            delay={getDelayArr({ max599, between600_899 })[1]}
+          >
+            <StyledImg src={toothbrush} alt='dental health' />
+            <ItemTitle>Salud dental.</ItemTitle>
+            <ItemDescription>
+              Prevenimos problemas dentales y mantenemos una boca saludable para
+              una vida larga y feliz.
+            </ItemDescription>
+          </InfoContainer>
+        </ResponsiveContainer>
+        <ResponsiveContainer>
+          <InfoContainer
+            ref={targetEl3}
+            trigger={trigger3}
+            delay={getDelayArr({ max599, between600_899 })[2]}
+          >
+            <StyledImg src={bed} alt='admission' />
+            <ItemTitle>Internaciones.</ItemTitle>
+            <ItemDescription>
+              Con un equipo altamente capacitado y un ambiente acogedor, tu
+              mascota estará en buenas manos durante su recuperación.
+            </ItemDescription>
+          </InfoContainer>
+        </ResponsiveContainer>
+        <ResponsiveContainer>
+          <InfoContainer
+            ref={targetEl4}
+            trigger={trigger4}
+            delay={getDelayArr({ max599, between600_899 })[3]}
+          >
+            <StyledImg src={ambulance} alt='emergency services 24 hours' />
+            <ItemTitle>Servicio de emergencias 24 hs.</ItemTitle>
+            <ItemDescription>
+              Atendemos tu emergencia las 24/7: estamos aquí para proteger la
+              salud de tu mascota.
+            </ItemDescription>{" "}
+            <HighlightRed sx={{ fontSize: "1.5rem", textAlign: "center" }}>
+              Te: 555-555-555
+            </HighlightRed>
+          </InfoContainer>
+        </ResponsiveContainer>
       </ResponsiveItemsContainer>
       <FlexRowCenter>
         <PageLink to={links.services} sx={{ marginRight: "32px" }}>
