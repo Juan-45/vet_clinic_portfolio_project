@@ -4,12 +4,12 @@ import { TRANSITION_TIME } from "components/CommonStyles";
 import mergician from "mergician";
 
 const ProminentTitleContainer = styled(Box)(({ theme }) => ({
-  marginLeft: "24px",
+  marginLeft: theme.spacing(3),
   marginTop: "90px",
-  marginBottom: "30px",
-
+  marginBottom: theme.spacing(4),
+  width: "fit-content",
   [theme.breakpoints.down("screen_max_850")]: {
-    marginLeft: "24px",
+    marginLeft: theme.spacing(3),
     marginTop: "105px",
     marginBottom: "42px",
   },
@@ -39,6 +39,7 @@ const StyledTitle = styled(Typography)(({ theme }) =>
       height: "200px",
       left: "-24px",
       background: theme.palette.ternary.medium,
+      boxShadow: theme.shadows[2],
     },
 
     "&::before": {
