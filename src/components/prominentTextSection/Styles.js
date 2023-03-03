@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import { AfterSquareContainer } from "components/CommonStyles";
 import { styled } from "@mui/material/styles";
 
 const Container = styled(Box)(({ theme }) => ({
@@ -9,32 +10,18 @@ const Container = styled(Box)(({ theme }) => ({
   paddingLeft: theme.spacing(2),
 }));
 
-const InnerContainer = styled(Box)(({ theme }) => ({
-  "&.innerContainerNoImg": {
-    position: "relative",
-    zIndex: 0,
-    marginBottom: "25px",
-    marginRight: "25px",
-    "&::after": {
-      content: "''",
-      position: "absolute",
-      zIndex: -1,
-      display: "inline-block",
-      width: "80%",
-      height: "calc(100% + 50px)",
-      bottom: "-25px",
-      left: "calc(20% + 25px)",
-      background: theme.palette.secondary.medium,
-    },
-  },
-
+const InnerContainer = styled(AfterSquareContainer)({
   "&.innerContainerWithImg": {
+    position: "initial",
+    "&::after": {
+      content: "unset",
+    },
     display: "flex",
     alignItems: "start",
     width: "100%",
     flexWrap: "wrap",
   },
-}));
+});
 
 const ParagraphContainer = styled(Box)(({ theme }) => ({
   border: `3px solid ${theme.palette.ternary.medium}`,
@@ -53,32 +40,17 @@ const ImgPositioning = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  paddingLeft: theme.spacing(4),
   paddingTop: theme.spacing(4),
   width: "100%",
   [theme.breakpoints.up("tablet_min_900")]: {
     maxWidth: "50%",
     paddingTop: "0px",
+    paddingLeft: theme.spacing(4),
   },
 }));
 
-const ImageContainer = styled(Box)(({ theme }) => ({
+const ImageContainer = styled(AfterSquareContainer)(({ theme }) => ({
   display: "flex",
-  position: "relative",
-  zIndex: 0,
-  marginBottom: "25px",
-  marginRight: "25px",
-  "&::after": {
-    content: "''",
-    position: "absolute",
-    zIndex: -1,
-    display: "inline-block",
-    width: "80%",
-    height: "100%",
-    bottom: "-25px",
-    right: "-25px",
-    background: theme.palette.secondary.medium,
-  },
 }));
 
 const StyledImg = styled("img")(({ theme }) => ({

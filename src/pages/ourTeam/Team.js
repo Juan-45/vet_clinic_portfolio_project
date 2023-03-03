@@ -10,7 +10,7 @@ const Team = () => (
   <LargeContainer>
     <ProminentTextSection>
       <Title variant='h1'>Nuestra equipo</Title>
-      <InnerContainer className='innerContainerNoImg'>
+      <InnerContainer className='innerContainerNoImg oversized secondary'>
         <ParagraphContainer>
           <Paragraph>
             En PetPaw, nuestro equipo está compuesto por veterinarios y técnicos

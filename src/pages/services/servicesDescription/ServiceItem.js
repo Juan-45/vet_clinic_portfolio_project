@@ -1,29 +1,17 @@
 import PropTypes from "prop-types";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { ResponsiveContainer, TRANSITION_TIME } from "components/CommonStyles";
+import {
+  ResponsiveContainer,
+  AfterSquareContainer,
+  TRANSITION_TIME,
+} from "components/CommonStyles";
 import BottomCurve from "components/BottomCurve";
 import { theme } from "theme/theme";
 
-const ServiceContainer = styled(Box)(({ theme }) => ({
-  position: "relative",
-  zIndex: 0,
-  marginBottom: "25px",
-  marginRight: "25px",
+const ServiceContainer = styled(AfterSquareContainer)(({ theme }) => ({
   width: "calc(100% - 25px)",
   height: "100%",
-  "&::after": {
-    content: "''",
-    position: "absolute",
-    zIndex: -1,
-    display: "inline-block",
-    width: "80%",
-    height: "95%",
-    bottom: "-25px",
-    left: "calc(20% + 25px)",
-    background: theme.palette.secondary.medium,
-    boxShadow: theme.shadows[2],
-  },
   "&::before": {
     content: "''",
     position: "absolute",
@@ -69,7 +57,7 @@ const TextContainer = styled(Box)(({ theme }) => ({
 
 const ServiceItem = ({ children, src, alt, pathDefinition }) => (
   <ResponsiveContainer columns={3}>
-    <ServiceContainer>
+    <ServiceContainer className='secondary'>
       <InnerContainer>
         <ImgContainer className='imgContainer'>
           <StyledImg src={src} alt={alt} />
