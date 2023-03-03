@@ -44,7 +44,7 @@ const theme = createTheme({
       main: "#956730",
     },
     text: {
-      light: "#fff",
+      white: "#fff",
     },
     background: {
       transparent: palette.background.transparent,
@@ -153,7 +153,7 @@ const theme = createTheme({
     },
     caption: {
       lineHeight: 1.4,
-      fontSize: "0.8rem",
+      fontSize: "1rem",
       [mobile_max_599]: {
         lineHeight: 1.2,
       },
@@ -163,8 +163,11 @@ const theme = createTheme({
   components: {
     MuiButton: {
       defaultProps: {
-        disableRipple: true,
+        variant: "contained",
       },
+    },
+    MuiListItemButton: {
+      defaultProps: {},
     },
     MuiList: {
       defaultProps: {
@@ -188,7 +191,18 @@ const theme = createTheme({
         },
       },
     },
+    MuiTextField: {
+      defaultProps: {
+        variant: "standard",
+        fullWidth: true,
+      },
+    },
+    MuiAutocomplete: {
+      defaultProps: {
+        disablePortal: true,
+      },
+    },
   },
 });
-
+console.log("TEMA", theme);
 export { theme };

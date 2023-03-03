@@ -40,7 +40,10 @@ const Presentation = ({ links }) => {
             </FlexRowCenter>
           </ParagraphContainer>
           <ImgPositioning>
-            <ImageContainer src={happy_dog_500x334_c}>
+            <ImageContainer
+              src={happy_dog_500x334_c}
+              className='secondary responsive'
+            >
               <StyledImg src={happy_dog_500x334_c} alt='test' />
             </ImageContainer>
           </ImgPositioning>

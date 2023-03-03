@@ -10,7 +10,7 @@ const Story = () => (
   <LargeContainer>
     <ProminentTextSection>
       <Title variant='h1'>Nuestra historia</Title>
-      <InnerContainer className='innerContainerNoImg'>
+      <InnerContainer className='innerContainerNoImg oversized secondary'>
         <ParagraphContainer>
           <Paragraph>
             La historia de PetPaw comienza hace más de dos décadas, cuando un

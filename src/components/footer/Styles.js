@@ -57,7 +57,7 @@ const StyledFlexRowCenter = styled(FlexRowCenter)(({ theme }) => ({
 }));
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
-  color: theme.palette.text.light,
+  color: theme.palette.text.white,
   fontWeight: 600,
 }));
 
@@ -72,7 +72,7 @@ const FooterLink = styled(StyledLink)(({ theme }) => ({
     content: "''",
     bottom: 0,
     left: 0,
-    background: theme.palette.text.light,
+    background: theme.palette.text.white,
     height: "3px",
     width: "100%",
   },
