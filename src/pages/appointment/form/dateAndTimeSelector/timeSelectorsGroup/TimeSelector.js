@@ -51,7 +51,12 @@ const TimeSelector = ({
           {match_max_599 ? title.short : title.long}
         </DateLabel>
       </DateLabelContainer>
-      <DisplacementButton disabled={step === 0} onClick={upHandler}>
+      <DisplacementButton
+        disabled={step === 0}
+        onClick={upHandler}
+        disableRipple
+        className='up'
+      >
         <Arrow className='up' />
       </DisplacementButton>
       <VerticalCarouselContainer>
@@ -60,6 +65,8 @@ const TimeSelector = ({
       <DisplacementButton
         disabled={step === MAX_AMOUNT_MOVEMENTS}
         onClick={downHandler}
+        disableRipple
+        className='down'
       >
         <Arrow />
       </DisplacementButton>
