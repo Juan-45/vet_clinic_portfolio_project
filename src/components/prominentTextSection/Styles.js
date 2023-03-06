@@ -12,6 +12,8 @@ const Container = styled(Box)(({ theme }) => ({
 
 const InnerContainer = styled(AfterSquareContainer)({
   "&.innerContainerWithImg": {
+    marginRight: "0px",
+    marginBottom: "0px",
     position: "initial",
     "&::after": {
       content: "unset",
@@ -63,6 +65,7 @@ const StyledImg = styled("img")(({ theme }) => ({
 
 const Paragraph = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(2),
+  textAlign: "justify",
 }));
 
 const Bold = styled("span")({

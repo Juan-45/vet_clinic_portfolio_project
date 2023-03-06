@@ -53,9 +53,7 @@ const PickerContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   marginBottom: theme.spacing(2),
   marginTop: theme.spacing(2),
-  "&.column": {
-    flexDirection: "column",
-  },
+  flexDirection: "column",
   "&.rightSpace": {
     marginRight: theme.spacing(8),
     [theme.breakpoints.down("tablet_min_900")]: {
@@ -99,13 +97,22 @@ const DisplacementButton = styled(Button)(({ theme }) => ({
   height: "initial",
   width: "100%",
   borderRadius: "0px",
-  background: theme.palette.secondary.main,
   boxShadow: "unset",
   paddingTop: theme.spacing(0.5),
   paddingBottom: theme.spacing(0.5),
+  color: theme.palette.text.primary,
   "&:hover": {
-    background: theme.palette.secondary.medium,
     boxShadow: "unset",
+    background: theme.palette.common.white,
+  },
+  "&, &.Mui-disabled": {
+    background: theme.palette.common.white,
+  },
+  "&.up": {
+    borderBottom: `1px solid ${theme.palette.divider}`,
+  },
+  "&.down": {
+    borderTop: `1px solid ${theme.palette.divider}`,
   },
 }));
 
@@ -122,16 +129,20 @@ const List = styled(OriginalList, {
   transform: `translateY(-${translateY}px)`,
 }));
 
-const ListItem = styled(OriginalListItem)(({ theme }) => ({
+const ListItem = styled(OriginalListItem)({
   "&:hover": {
-    background: theme.palette.action.focus,
+    background: "unset",
   },
-}));
+});
 
 const ListItemButton = styled(OriginalListItemButton)(({ theme }) => ({
   lineHeight: 1,
-  "&.Mui-selected": {
-    background: theme.palette.secondary.medium,
+  background: theme.palette.secondary.medium,
+  "&.Mui-selected, &.Mui-selected:hover, &:hover": {
+    background: theme.palette.secondary.main,
+  },
+  "&.Mui-disabled, &.Mui-disabled:hover": {
+    background: "unset",
   },
 }));
 

@@ -2,7 +2,10 @@ import PropTypes from "prop-types";
 import {
   PickerContainer,
   TimeSelectorContainer,
+  CaptionContainer,
+  ReferenceBox,
 } from "pages/appointment/form/dateAndTimeSelector/Styles";
+import { Typography, Box } from "@mui/material";
 import TimeSelector from "pages/appointment/form/dateAndTimeSelector/timeSelectorsGroup/TimeSelector";
 import TimeSelectorContent from "pages/appointment/form/dateAndTimeSelector/timeSelectorsGroup/TimeSelectorContent";
 
@@ -41,14 +44,27 @@ const TimeSelectorsGroup = ({
       );
   });
 
-  return <PickerContainer>{children}</PickerContainer>;
+  return (
+    <PickerContainer>
+      <Box sx={{ display: "flex" }}>{children}</Box>
+      <CaptionContainer>
+        <ReferenceBox />
+        <Typography variant='caption'>Horarios disponibles</Typography>
+      </CaptionContainer>
+    </PickerContainer>
+  );
 };
 
 TimeSelectorsGroup.propTypes = {
   resetPosition: PropTypes.bool,
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      times: PropTypes.arrayOf(PropTypes.string),
+      times: PropTypes.arrayOf(
+        PropTypes.shape({
+          time: PropTypes.string,
+          isAvailable: PropTypes.bool,
+        })
+      ),
       title: PropTypes.shape({
         short: PropTypes.string,
         long: PropTypes.string,
