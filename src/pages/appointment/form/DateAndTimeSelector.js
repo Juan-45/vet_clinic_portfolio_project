@@ -41,9 +41,15 @@ const DateAndTimeSelector = () => {
         if (!scheduleGap) {
           minutes.forEach((minute) => {
             if (hour < 10) {
-              schedule.push(`0${hour}:${minute}`);
+              schedule.push({
+                time: `0${hour}:${minute}`,
+                isAvailable: Math.floor(Math.random() * 10) % 2 === 0,
+              });
             } else {
-              schedule.push(`${hour}:${minute}`);
+              schedule.push({
+                time: `${hour}:${minute}`,
+                isAvailable: Math.floor(Math.random() * 10) % 2 === 0,
+              });
             }
           });
         }
