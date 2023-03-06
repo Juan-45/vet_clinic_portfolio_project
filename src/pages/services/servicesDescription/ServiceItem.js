@@ -4,33 +4,15 @@ import { styled } from "@mui/material/styles";
 import {
   ResponsiveContainer,
   AfterSquareContainer,
-  TRANSITION_TIME,
+  //  TRANSITION_TIME,
 } from "components/CommonStyles";
 import BottomCurve from "components/BottomCurve";
 import { theme } from "theme/theme";
 
-const ServiceContainer = styled(AfterSquareContainer)(({ theme }) => ({
+const ServiceContainer = styled(AfterSquareContainer)({
   width: "calc(100% - 25px)",
   height: "100%",
-  "&::before": {
-    content: "''",
-    position: "absolute",
-    bottom: 0,
-    width: "0%",
-    height: "3px",
-    transition: `width ${TRANSITION_TIME}s ease`,
-    background: theme.palette.ternary.medium,
-  },
-  "&:hover:before": {
-    width: "100%",
-  },
-  "& .imgContainer": {
-    transition: `filter ${TRANSITION_TIME}s ease`,
-  },
-  "&:hover .imgContainer": {
-    filter: "sepia(0.5)",
-  },
-}));
+});
 
 const InnerContainer = styled(Box)(({ theme }) => ({
   boxShadow: theme.shadows[2],
