@@ -20,6 +20,7 @@ const getCommonProminentTitleStyles = ({ theme }) => ({
   fontWeight: 400,
   paddingLeft: theme.spacing(1),
   paddingRight: theme.spacing(1),
+  textAlign: "center",
 });
 
 const StyledTitle = styled(Typography)(({ theme }) =>
@@ -61,7 +62,7 @@ const StyledTitle = styled(Typography)(({ theme }) =>
 
     [theme.breakpoints.down("screen_max_850")]: {
       padding: theme.spacing(2),
-      textShadow: "0px 10px 2px #00000028",
+      textShadow: "0px 3px 2px #00000028",
       "&::after": {
         bottom: "-24px",
       },

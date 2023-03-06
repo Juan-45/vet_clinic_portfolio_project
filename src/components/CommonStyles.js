@@ -151,6 +151,7 @@ const ItemDescription = styled(Typography)(({ theme }) =>
 );
 
 const Title = styled(Typography)(({ theme }) => ({
+  textAlign: "center",
   fontFamily: "Staatliches",
   fontWeight: 500,
   position: "relative",
