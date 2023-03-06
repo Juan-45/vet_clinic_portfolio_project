@@ -17,7 +17,8 @@ const ContactHeader = () => {
     >
       <TextContainer>
         <Blurb variant='h1' color='primary'>
-          Agenda tu cita <HighlightBlue>ahora</HighlightBlue>.
+          <HighlightBlue>¡Contáctanos!</HighlightBlue> Estamos aquí para
+          ayudarte
         </Blurb>
       </TextContainer>
     </Header>
