@@ -4,13 +4,12 @@ import {
   MapContainer,
   InfoContainer,
   InfoItemContainer,
-  StyledFlexRowCenter,
   StyledTypography,
   InfoText,
   FooterLink,
   Anchor,
 } from "components/footer/Styles";
-import { LargeContainerFlex } from "components/CommonStyles";
+import { LargeContainerFlex, FlexRowCenter } from "components/CommonStyles";
 import { IconButton, Typography, Button, Box } from "@mui/material";
 import Logo from "components/Logo";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -24,9 +23,9 @@ const Footer = ({ homeUrl, imgUrl }, ref) => {
   return (
     <Container>
       <InfoContainer>
-        <StyledFlexRowCenter>
+        <FlexRowCenter className='smallBottomSpace'>
           <Logo homeURL={homeUrl} src={imgUrl} alt='logo' />
-        </StyledFlexRowCenter>
+        </FlexRowCenter>
         <InfoItemContainer>
           <InfoText>Av. Pellegrini, 3200</InfoText>
           <InfoText>Santa Fe, Rosario</InfoText>
@@ -44,7 +43,7 @@ const Footer = ({ homeUrl, imgUrl }, ref) => {
           <StyledTypography>Test test</StyledTypography>
         </FooterLink>
 </InfoItemContainer>*/}
-        <StyledFlexRowCenter>
+        <FlexRowCenter className='smallBottomSpace'>
           <Anchor href='https://www.facebook.com/'>
             <IconButton aria-label='facebook'>
               <FacebookIcon />
@@ -65,7 +64,7 @@ const Footer = ({ homeUrl, imgUrl }, ref) => {
               <YouTubeIcon />
             </IconButton>
           </Anchor>
-        </StyledFlexRowCenter>
+        </FlexRowCenter>
       </InfoContainer>
       <MapContainer ref={ref}>
         <Typography>CARGANDO . . . </Typography>

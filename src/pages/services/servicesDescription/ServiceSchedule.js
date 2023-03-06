@@ -5,32 +5,21 @@ import {
   ItemDescription,
   HighlightRed,
   HighlightBlue,
+  AfterSquareContainer,
 } from "components/CommonStyles";
 import ProminentTitle from "components/ProminentTitle";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useTheme } from "@mui/material/styles";
 
-const InnerContainer = styled(Box)(({ theme }) => ({
+const InnerContainer = styled(AfterSquareContainer)({
   display: "flex",
   flexDirection: "column",
-  position: "relative",
-  margin: "25px 25px 25px 0px",
-  "&::after": {
-    content: "''",
-    position: "absolute",
-    zIndex: 0,
-    height: "calc(100% + 50px)",
-    width: "80%",
-    top: "-25px",
-    right: "-25px",
-    background: theme.palette.secondary.medium,
-    boxShadow: theme.shadows[2],
-  },
+  width: "100%",
   "& .infoContainer:last-child": {
     marginBottom: "0px",
   },
-}));
+});
 
 const InfoContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -71,36 +60,34 @@ const ServiceSchedule = () => {
   return (
     <LargeContainerFlex className='sidePadding bottomSpace'>
       <ProminentTitle>Nuestros horarios</ProminentTitle>
-      <ResponsiveItemsContainer>
-        <InnerContainer>
-          <InfoContainer className='infoContainer'>
-            <Title>Atención médica</Title>
-            <BodyTextContainer>
-              <Days>De Lunes a Viernes:</Days>
-              <Description>
-                De 08:00 hs a 12:00 hs y de 16:00 hs a 20:00 hs
-              </Description>
-            </BodyTextContainer>
-          </InfoContainer>
-          <InfoContainer className='infoContainer'>
-            <Title>Estética y aséo</Title>
-            <BodyTextContainer>
-              <Days>De Martes a Jueves:</Days>
-              <Description>De 08:00 hs a 12:00 hs</Description>
-            </BodyTextContainer>
-          </InfoContainer>
-          <InfoContainer className='infoContainer'>
-            <Title>Servicio de emergencia con ambulancia</Title>
-            <BodyTextContainer>
-              <Description>
-                Disponible las <HighlightBlue>24 horas</HighlightBlue> los{" "}
-                <HighlightBlue>7 días de la semana</HighlightBlue>{" "}
-                <HighlightRed>Te. 555-555-555</HighlightRed>
-              </Description>
-            </BodyTextContainer>
-          </InfoContainer>
-        </InnerContainer>
-      </ResponsiveItemsContainer>
+      <InnerContainer className='secondary oversized'>
+        <InfoContainer className='infoContainer'>
+          <Title>Atención médica</Title>
+          <BodyTextContainer>
+            <Days>De Lunes a Viernes:</Days>
+            <Description>
+              De 08:00 hs a 12:00 hs y de 16:00 hs a 20:00 hs
+            </Description>
+          </BodyTextContainer>
+        </InfoContainer>
+        <InfoContainer className='infoContainer'>
+          <Title>Estética y aséo</Title>
+          <BodyTextContainer>
+            <Days>De Martes a Jueves:</Days>
+            <Description>De 08:00 hs a 12:00 hs</Description>
+          </BodyTextContainer>
+        </InfoContainer>
+        <InfoContainer className='infoContainer'>
+          <Title>Servicio de emergencia con ambulancia</Title>
+          <BodyTextContainer>
+            <Description>
+              Disponible las <HighlightBlue>24 horas</HighlightBlue> los{" "}
+              <HighlightBlue>7 días de la semana</HighlightBlue>{" "}
+              <HighlightRed>Te. 555-555-555</HighlightRed>
+            </Description>
+          </BodyTextContainer>
+        </InfoContainer>
+      </InnerContainer>
     </LargeContainerFlex>
   );
 };

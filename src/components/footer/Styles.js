@@ -1,6 +1,6 @@
 import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
-import { FlexRowCenter, StyledLink } from "components/CommonStyles";
+import { StyledLink } from "components/CommonStyles";
 
 const Container = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -52,10 +52,6 @@ const InfoItemContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
-const StyledFlexRowCenter = styled(FlexRowCenter)(({ theme }) => ({
-  marginBottom: theme.spacing(2),
-}));
-
 const StyledTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.text.white,
   fontWeight: 600,
@@ -97,7 +93,6 @@ export {
   MapContainer,
   InfoContainer,
   InfoItemContainer,
-  StyledFlexRowCenter,
   StyledTypography,
   InfoText,
   FooterLink,

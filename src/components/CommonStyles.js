@@ -18,6 +18,9 @@ const FlexRowCenter = styled(Box)(({ theme }) => ({
   "&.bottomSpace": {
     marginBottom: theme.spacing(8),
   },
+  "&.smallBottomSpace": {
+    marginBottom: theme.spacing(2),
+  },
 }));
 
 const MediumContainer = styled(Box)(({ theme }) => ({
@@ -60,7 +63,6 @@ const HighlightRed = styled("span")(({ theme }) =>
 const HighlightBlue = styled("span")(({ theme }) =>
   mergician(highlightCommon, {
     color: theme.palette.info.main,
-    textTransform: "uppercase",
   })
 );
 
@@ -253,7 +255,6 @@ const AfterSquareContainer = styled(Box)(({ theme }) => ({
   zIndex: 0,
   marginRight: "25px",
   marginBottom: "25px",
-  width: "fit-content",
   "&::after": {
     content: "''",
     position: "absolute",
