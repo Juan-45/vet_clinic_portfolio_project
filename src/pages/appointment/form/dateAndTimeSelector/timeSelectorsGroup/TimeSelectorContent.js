@@ -8,16 +8,17 @@ import {
 const TimeSelectorContent = ({ contentData, selectedTimeId, timeHandler }) => {
   return (
     <>
-      {contentData.times.map((time) => {
-        const currentId = `${contentData.dateStr}_${time}`;
+      {contentData.times.map((timeItem) => {
+        const currentId = `${contentData.dateStr}_${timeItem.time}`;
         return (
-          <ListItem key={time}>
+          <ListItem key={timeItem.time}>
             <ListItemButton
               id={currentId}
               selected={currentId === selectedTimeId}
               onClick={timeHandler}
+              disabled={timeItem.isAvailable}
             >
-              {time}
+              {timeItem.time}
             </ListItemButton>
           </ListItem>
         );
@@ -28,7 +29,12 @@ const TimeSelectorContent = ({ contentData, selectedTimeId, timeHandler }) => {
 
 TimeSelectorContent.propTypes = {
   contentData: PropTypes.shape({
-    times: PropTypes.arrayOf(PropTypes.string),
+    times: PropTypes.arrayOf(
+      PropTypes.shape({
+        time: PropTypes.string,
+        isAvailable: PropTypes.bool,
+      })
+    ),
     dateStr: PropTypes.string,
   }).isRequired,
   selectedTimeId: PropTypes.string.isRequired,
