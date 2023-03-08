@@ -202,6 +202,11 @@ const theme = createTheme({
         disablePortal: true,
       },
     },
+    MuiAccordion: {
+      defaultProps: {
+        square: true,
+      },
+    },
   },
 });
 console.log("TEMA", theme);
