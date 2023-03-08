@@ -13,6 +13,9 @@ const ProminentTitleContainer = styled(Box)(({ theme }) => ({
     marginTop: "105px",
     marginBottom: "42px",
   },
+  "&.extraBottomSpace": {
+    marginBottom: theme.spacing(6),
+  },
 }));
 
 const getCommonProminentTitleStyles = ({ theme }) => ({
@@ -86,8 +89,8 @@ const ReflectedText = styled(Typography)(({ theme }) =>
   })
 );
 
-const ProminentTitle = ({ children }) => (
-  <ProminentTitleContainer>
+const ProminentTitle = ({ children, className }) => (
+  <ProminentTitleContainer className={className}>
     <StyledTitle variant='h1'>{children}</StyledTitle>
     <ReflectedText variant='h1'>{children}</ReflectedText>
   </ProminentTitleContainer>
